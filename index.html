@@ -1,0 +1,93 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bir Haftalık Mucize</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(#1e1e2f, #2e2e45);
+            color: #f0e6f6;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        #envelope {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #ffffff33;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 700px;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px #00000088;
+            display: none;
+            margin: 40px;
+        }
+        #start {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #f0e6f6;
+            color: #1e1e2f;
+            padding: 15px 30px;
+            border: none;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        #start:hover {
+            background: #d3c1f0;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="start">Tıkla ve Oku ♥</button>
+
+    <div id="envelope">
+        <p>Canımın içi,</p>
+
+        <p>Bugün seninle geçirdiğimiz ilk haftayı geride bırakıyoruz. Belki sadece "bir hafta" diyebilir dışarıdan bakanlar… Ama bu bir hafta içinde içimde o kadar çok şey oldu ki, tarif etmek kolay değil.</p>
+
+        <p>Sen hayatıma öyle bir girdin ki… sanki uzun süredir eksik kalan bir parçamdın da, sonunda yerini bulmuş gibi hissediyorum. Gülüşün, sesin, bana "iyi geceler" dediğin o anlar… hepsi birer hazine gibi içime kazındı.</p>
+
+        <p>Seninle konuşurken zamanın nasıl geçtiğini anlamıyorum. Bir kelimene gülümsüyor, bir kelimenle dalıp gidiyorum. Henüz çok yeniyiz ama kalbim bir süredir sanki seni tanıyormuş gibi… Ve buna hiç şaşırmıyorum. Çünkü senin gibi birine rastlamak şans değil, mucize gibi.</p>
+
+        <p>Bazen sadece yanında olmayı, elini tutmayı, gözlerinin içine bakıp hiçbir şey dememeyi hayal ediyorum. Bu mektubu da sana sarılarak okumak isterdim. Ama biliyorum… Mesafeler kalbe engel değil. Hissettiğim her şey gerçek, senin için, sadece senin için.</p>
+
+        <p>Bu sadece bir başlangıç. Daha nice haftaları, ayları, yılları beraber geçirmek istiyorum. Birlikte büyüyelim, birlikte çoğalalım… Ve en önemlisi, birbirimizi hiç kaybetmeyelim.</p>
+
+        <p>İyi ki geldin hayatıma. İyi ki varsın. Ve iyi ki… biz olduk.</p>
+
+        <p><strong>Sevgilin...</strong></p>
+    </div>
+
+    <audio id="bgm" loop autoplay>
+        <source src="https://example.com/emre_nalbantoglu_hanimefendi.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+    </audio>
+
+    <script>
+        const btn = document.getElementById('start');
+        const letter = document.getElementById('envelope');
+        const bgm = document.getElementById('bgm');
+
+        btn.addEventListener('click', () => {
+            btn.style.display = 'none';
+            letter.style.display = 'block';
+            bgm.play();
+        });
+    </script>
+</body>
+</html>
